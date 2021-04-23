@@ -1,4 +1,5 @@
-![cabecera](header.png)
+![cabecera](https://cfbv.neocities.org/images/aux/header.png)
+
 # Configuraciones iniciales
 ---
 ## ¿Qué aprenderemos en  esta clase?

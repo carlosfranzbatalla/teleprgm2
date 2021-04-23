@@ -372,6 +372,9 @@ public override string prender()
 Si instancia 'lavadora' la invocación del método 'prender' imprimirá en pantalla `Asegúrese de tener agua. Se inicia encendido de la lavadora.`.
 
 ## 3 Ejercicios Propuestos
+Si su nro. de Cédula termina en un número par haga el ejercicio 3.1, de lo contrario el 3.2. 
+Fecha de entrega: 02 de Mayo.
+
 ### 3.1 Ejercicio par
 Crear una Clase para llevar la información de los empleados del departamento de almacén de una hipertienda.  Como este desarrollo se escalará al resto de la organización, la Clase a desarrollar debe extender a una Clase base Empleados que se usará posteriormente para los empleados de los otros departamentos de la empresa.  Esta Clase debe permitir el ingreso de los datos básicos del empleado así como los datos particulares inherentes a las funciones de su departamento (recepción y envío de mercancías, control de calidad, inventario etc.). Por temas de seguridad, el acceso a los atributos de la Clase debe ser privado, por lo que necesitará de implementar los mecanismos adecuados para el ingreso de datos. Además, es de suma importancia que considere el atributo 'salario' y evitar que un empleado le sea asignado '0' o un valor negativo.  
 La Clase solicitada debe ser instanciada desde el programa principal para verificar su ejecución. 
