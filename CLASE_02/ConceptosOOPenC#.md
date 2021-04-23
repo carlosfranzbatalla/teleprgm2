@@ -373,6 +373,7 @@ Si instancia 'lavadora' la invocación del método 'prender' imprimirá en panta
 
 ## 3 Ejercicios Propuestos
 Si su nro. de Cédula termina en un número par haga el ejercicio 3.1, de lo contrario el 3.2. 
+Suba a su repositorio el código de esta entrega.
 Fecha de entrega: 02 de Mayo.
 
 ### 3.1 Ejercicio par
