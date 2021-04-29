@@ -42,7 +42,7 @@ Para crear un Objeto debe:
 
 2.- *Instanciar* la Clase que creó en el paso anterior.
 
-Y, ¿Que es una Clase?
+Y.. ¿Que es una Clase?
 
 ### 1.2 Clase 
 
@@ -58,9 +58,7 @@ El mismo razonamiento anterior, sirve para cualquier Objeto de la vida real, que
 
 >Vea los Objetos que lo rodean. Todos tienen sus propiedades (color, tamaño, forma etc.) y su comportamiento (arranca, muestra, escribe etc.). Todos tienen sus atributos y métodos.  Este ejercicio mental, lo ayudará a ganar destreza diseñando sistemas.
 
-En esencia, una Clase es un tipo de datos, así:
-
-Es un tipo de dato que contiene **ATRIBUTOS Y MÉTODOS**
+En esencia, una Clase es: un tipo de dato que contiene **ATRIBUTOS Y MÉTODOS**
 
 Entonces, ¿Cómo hacemos una Clase?
 
@@ -96,7 +94,7 @@ Los métodos trabajarán sobre los datos de la Clase. Es importante resaltar que
 
 Los métodos son el único medio para acceder a los atributos del Objeto. Es decir,
 
-| los atributos deden estar ocultos 	|
+| los atributos deben estar ocultos 	|
 |-----------------------------------	|
 
 
@@ -104,7 +102,7 @@ Suponga que Ud. programa soluciones para el [Internet-de-las-cosas](https://www.
 
 
 ![joyanes lavadora](./images/1_03.png)
-<sup>1</sup>
+
 
 Para llegar a esa solución, los electrodomesticos de su casa serán los Objetos que interactuan en su app. Si un electrodomestico es un Objeto, tiene atributos y métodos.  Para que sea Objeto, antes debe definir la Clase. Veamos el código de esta Clase en C#:
 
