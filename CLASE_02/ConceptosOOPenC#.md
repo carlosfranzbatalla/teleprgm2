@@ -104,10 +104,10 @@ Suponga que Ud. programa soluciones para el [Internet-de-las-cosas](https://www.
 ![joyanes lavadora](./images/1_03.png)
 
 
-Para llegar a esa solución, los electrodomesticos de su casa serán los Objetos que interactuan en su app. Si un electrodomestico es un Objeto, tiene atributos y métodos.  Para que sea Objeto, antes debe definir la Clase. Veamos el código de esta Clase en C#:
+Para llegar a esa solución, los electrodomésticos de su casa serán los Objetos que interactuan en su app. Si un electrodoméstico es un Objeto, tiene atributos y métodos.  Para que sea Objeto, antes debe definir la Clase. Veamos el código de esta Clase en C#:
 
 ```
-// 
+
 public class electrodomestico {
   // datos de la Clase
   public string marca;
@@ -165,7 +165,7 @@ El descriptor `set` tiene una variable predefinida llamada `value` cuyo valor es
 
 Como Ud. administra el acceso a los atributos de un Objeto use las Propiedades para implementar validaciones a la asignacion de valores a los atributos de un Objeto.  
 
-Apliquemos los descriptores de acceso y alguna validación a dos de los atributos de la Clase electrodomestico:
+Apliquemos los descriptores de acceso y alguna validación a dos de los atributos de la Clase 'electrodomestico':
 
 ```
   class electrodomestico
@@ -228,7 +228,7 @@ electrodomestico oElectrodomestico = new electrodomestico();
 
 Ud. puede en su desarrollo instanciar la Clase, las veces que considere necesario.  Cada instanciación resulta en un Objeto particular con sus propios atributos y métodos.
 
-En el contexto del ejemplo, si desea encender su electrodomestico, tendrá que invocar el método 'prender' de la Clase. Una vez instanciada la Clase, la referencia a los atributos y métodos del Objeto lo haremos con el operador '.' (punto). 
+En el contexto del ejemplo, si desea encender su electrodoméstico, tendrá que invocar el método 'prender' de la Clase. Una vez instanciada la Clase, la referencia a los atributos y métodos del Objeto lo haremos con el operador '.' (punto). 
 
 ```
 Console.WriteLine(oElectrodomestico.prender());
@@ -290,7 +290,7 @@ class lavadora : electrodomestico
 
 Los dos puntos ':' indican que la Clase que estamos creando 'lavadora' hereda de la Clase 'eletrodomestico' sus atributos y métodos.
 En este ejemplo, 'electrodomestico' será la Clase base o super Clase y 'lavadora' la subClase.  Otra forma de decirlo (y la que más usaremos) es:
-lavadora *extiende* a electrodomestico.
+la clase 'lavadora' *extiende* a la clase 'electrodomestico'.
 
 
 
@@ -298,7 +298,7 @@ lavadora *extiende* a electrodomestico.
 Como en la vida real, la abstracción es ocuparse de los aspectos más importantes de un punto de vista determinado y no de otros. Es decir, la abstracción diferencia entre las propiedades externas de una unidad y los detalles internos de la misma.
 
 Utilizando nuestro ejemplo del electrodomestico, Ud. estará familiarizado con sus características y su manejo manual.  Sabe como prenderlo, ajustarlo y detenerlo; Sin embargo, ¿sabe  cómo funciona internamente? Probablemente si, pero en primer termino **lo importante es que sabe usarlo**. Esta
-característica se debe a que los electrodomesticos seguramente separan su implementación interna (el motor, el cableado, las e/s de agua etc.) de su interfaz externa (la perilla on/off, los botones, los reguladores etc.)
+característica se debe a que los electrodomésticos seguramente separan su implementación interna (el motor, el cableado, las e/s de agua etc.) de su interfaz externa (la perilla on/off, los botones, los reguladores etc.)
 
 Abstracción es entonces, una técnica para reducir la complejidad.
 
@@ -306,7 +306,7 @@ En OOP, Abstracción significa concentrarse en: *¿qué es?* y *¿qué hace?* un
 
 Si algo es abstracto implica que no puede instanciarse pero que existe como idea y/o concepto. En C# Ud. tiene a las clases abstractas; no se instancian pero sirven para crear clases base de las cuales se heredarán otras especializadas y específicas. 
 
-Con nuestro caso de estudio, podemos convertir a la clase 'electrodomestico' en abstracta ya que 'lavadora','plancha','arrocera' etc. heredarán sus atributos y métodos y no necesitará instanciarla más.  
+Con nuestro caso de estudio, podemos convertir a la clase 'electrodomestico' en abstracta ya que futuras y potenciales clases como 'lavadora','plancha','licuadora' etc. heredarán sus atributos y métodos y a 'electrodomestico' no necesitará instanciarla más.  
 
 ```
     abstract class electrodomestico
@@ -346,7 +346,7 @@ En simples terminos el polimorfismo nos permite (que en tiempo de ejecución) lo
 
 En programación sería la capacidad que tiene una Clase en convertirse en un nuevo Objeto sin cambiar su esencia.  Esto quiere decir que tendremos el mismo método en ambas Clases, pero en la Clase hija realizará diferentes acciones. Por lo que el polimorfismo es también denominado sobreescritura de métodos.
 
-Veámoslo con nuestro caso de estudio.  En la Clase base electrodomestico, el método 'prender' es declarado como 'virtual', esto permitirá sobrescribirlo en una Clase heredada.
+Veámoslo con nuestro caso de estudio.  En la Clase base 'electrodomestico', el método 'prender' es declarado como 'virtual', esto permitirá sobrescribirlo en una Clase heredada.
 
 ```
  public virtual string prender()
