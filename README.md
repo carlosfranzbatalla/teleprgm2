@@ -101,5 +101,5 @@ Por favor, adoptemos este estandard: añadir el hashtag **#teleprgm2** en el asu
 
 ## 6.- Bibliografía
 
-- [Fundamentos de la Programación. algoritmos, Estructura de Datos y Objetos - Luis Joyanes Aguilar](http://rax.vps.co.ve/Joyanes.pdf) (21Mg)
-- [Código limpio / Clean code: Manual de estilo para el desarrollo ágil de software - Robert C. Martin](http://rax.vps.co.ve/CleanCode.pdf) (78Mg)
+- [Fundamentos de la Programación. algoritmos, Estructura de Datos y Objetos - Luis Joyanes Aguilar](http://rax.vps.co.ve/Joyanes.pdf) (21Mb)
+- [Código limpio / Clean code: Manual de estilo para el desarrollo ágil de software - Robert C. Martin](http://rax.vps.co.ve/CleanCode.pdf) (78Mb)
