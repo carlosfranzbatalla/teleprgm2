@@ -30,8 +30,7 @@ La nomenclatura de los permisos va a la izquierda del nombre del atributo/métod
 |  paquete  |    ~    |              Puede ser accesado por objetos instanciados de clases que estén en el mismo paquete.               |
 
 
->UML no especifica un estandard para las propiedades o métodos de acceso a los atributos de la clase (getters y setters), así que en esta clase adoptaremos una [convención no oficial](https://stackoverflow.com/questions/28139621/
-shortcut-for-denoting-or-implying-getters-and-setters-in-uml-class-diagrams) que muestra la permisología del atributo y la existencia de un mecanismo de acceso a c/u de ellos, si existiera.
+>UML no especifica un estandard para las propiedades o métodos de acceso a los atributos de la clase (getters y setters), así que en esta clase adoptaremos una [convención no oficial](https://stackoverflow.com/questions/28139621/shortcut-for-denoting-or-implying-getters-and-setters-in-uml-class-diagrams) que muestra la permisología del atributo y la existencia de un mecanismo de acceso a c/u de ellos, si existiera.
 
 
 
