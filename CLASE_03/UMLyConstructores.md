@@ -1,6 +1,6 @@
 ![cabecera](https://cfbv.neocities.org/images/aux/header.png)
 
-# Constructores de Un Clase e Introducción al UML - Diagrama de Clases 
+# Constructores de una Clase e Introducción al UML - Diagrama de Clases 
 ---
 ## ¿Qué haremos en esta Clase
 - Introducir los conceptos básicos del Diagrama de Clases, como un inicio al desarrollo de sistemas usando UML
