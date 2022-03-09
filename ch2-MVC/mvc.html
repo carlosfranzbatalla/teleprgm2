@@ -1,0 +1,289 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://cfbv.neocities.org/images/aux/header.png" alt="cabecera"></p>
+<h1 id="Patrones-de-Dise&#241;o---Modelo-Vista-Controlador">Patrones de Dise&#241;o - Modelo-Vista-Controlador<a class="anchor-link" href="#Patrones-de-Dise&#241;o---Modelo-Vista-Controlador">&#182;</a></h1><hr>
+<h2 id="&#191;Qu&#233;-haremos-en-esta-Clase">&#191;Qu&#233; haremos en esta Clase<a class="anchor-link" href="#&#191;Qu&#233;-haremos-en-esta-Clase">&#182;</a></h2><ul>
+<li>Introducir el concepto de Patrones de Diseño en el ámbito del desarrollo de Software.</li>
+<li>Introducir el patrón arquitectural Modelo - Vista - Controlador.</li>
+<li>Proponer un ejercicio evaluado cuya resolución cubra los temas aquí tratados.</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1-Patrones-de-Dise&#241;o.">1 Patrones de Dise&#241;o.<a class="anchor-link" href="#1-Patrones-de-Dise&#241;o.">&#182;</a></h2><p>La aproximación inicial al desarrollo de la solución a un problema suele ser confuso cuando su contexto es nuevo.  Afortunadamente, en programación este contexto, varios de los problemas que presentan y su solución ya han sido manejados y eficientemente solventados; al punto de que, este conocimiento se ha estandarizado como una forma de solución casi universal a varios problemas de desarrollo de Software.</p>
+<h3 id="1.1-Definici&#243;n">1.1 Definici&#243;n<a class="anchor-link" href="#1.1-Definici&#243;n">&#182;</a></h3><p>Un patrón de diseño es un conjunto de estándares y soluciones reutilizables a problemas de común ocurrencia en el marco del diseño de software.  Resumiendo, <strong>son formas “estandarizadas” de resolver problemas comunes de diseño en el desarrollo de software.</strong></p>
+<p>Los patrones de diseño partieron de la ejecución sistemática de buenas prácticas, validando consecutivamente su idoneidad en la distribución de responsabilidades y en la forma de resolver problemas.</p>
+<h3 id="1.2-Utilidad">1.2 Utilidad<a class="anchor-link" href="#1.2-Utilidad">&#182;</a></h3><p>Permiten tener el código bien organizado y en consecuencia, legible y mantenible. Además facilita la reutilización de código y aumenta la escalabilidad del proyecto.</p>
+<p>En sí, proporcionan una terminología estándar y un conjunto de buenas prácticas en cuanto a la solución de problemas de desarrollo de software.</p>
+<p>Las ventajas del uso de patrones son evidentes:</p>
+<ul>
+<li>Conforman un amplio catálogo de problemas y soluciones</li>
+<li>Estandarizan la resolución de determinados problemas</li>
+<li>Condensan y simplifican el aprendizaje de las buenas prácticas</li>
+<li>Proporcionan un vocabulario común entre desarrolladores</li>
+<li>Evitan “reinventar la rueda”</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2-Modelo-Vista-Controlador">2 Modelo Vista Controlador<a class="anchor-link" href="#2-Modelo-Vista-Controlador">&#182;</a></h2><p>El Modelo-Vista-Controlador (MVC) es un patrón de arquitectura, de amplia adopción en aplicaciones web, que divide las tareas de un sistema en tres entidades interconectadas con el fin de separar la lógica de la interfaz de usuario de la lógica del sistema o modelo de negocio. Así, estas entidades pueden ser reutilizadas eficientemente e implementar con ellas el desarrollo paralelo. 
+Esta forma de distribuir responsabilidades separa, en función de los datos, el mecanismo de trato y manipulación del mecanismo de presentación. Entonces, el Controlador funciona entre la Vista y el Modelo. 
+Una <a href="https://wiki.c2.com/?ModelViewController">simplificación</a> efectiva sobre el patron MVC la dio el cientifico de datos de la U. de Virginia <a href="https://github.com/connellybarnes?tab=repositories">Connelly Barnes</a>:"El Modelo son los datos, la Vista las presentaciones en pantalla y el Controlador el pegamento entre ellos."</p>
+<p><strong>El modelo</strong> administra los datos y la lógica de la aplicación. Las funciones que ejecutan la solución de los problemas que debe tratar el desarrollo van programadas aquí y solo aquí.</p>
+<p>Además, es el único responsable de interactuar directamente con la Base de Datos.
+El modelo, puede ser también definido por lo que no es su responsabilidad: <em>El modelo no interactúa con el usuario de la aplicación, no muestra ni procesa pantallas, no muestra mensajes ni renderiza imágenes.</em></p>
+<p>La inclusión de directivas que interactuen con el usuario violan el fundamento del patrón.</p>
+<p><strong>La vista</strong> es la capa de presentación del sistema. Contiene la lógica necesaria para mostrar e interactuar con el usuario, y nada más.  No tiene intervención alguna de cómo el modelo trata y procesa los datos de la aplicación.  Puede ser una salida por consola, html etc.</p>
+<p>Finalmente, <strong>el Controlador</strong> es el intermediario; procesa las entradas del usuario que vienen  desde la vista y las dirige al modelo.  Cuando este responde, envía estos datos a la vista.</p>
+<p><img src="./images/mvc.jpg" alt="mvc"></p>
+<blockquote><p>En el ámbito del desarrollo web, la programación que aborda la lógica en el Controlador y en el Modelo es el Desarrollo Backend y en la Vista en <a href="https://es.wikipedia.org/wiki/Front_end_y_back_end">Desarrollo Frontend</a>.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.1-Ejemplo">2.1 Ejemplo<a class="anchor-link" href="#2.1-Ejemplo">&#182;</a></h3><p>Implementemos  el patron MVC con un ejemplo:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="ch">#!/usr/bint/python3</span>
+<span class="kn">import</span> <span class="nn">controller</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">vControlador</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">axiomaTerminalController</span><span class="p">()</span>
+    <span class="n">vControlador</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En python, la variable <code>__name__</code> obtiene su valor de acuerdo a la forma en que es ejecutado el script. Si es ejecutado directamente el valor que tiene es: <code>__main__</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.1-El-Modelo">2.1.1 El Modelo<a class="anchor-link" href="#2.1.1-El-Modelo">&#182;</a></h4><p>Esta capa del patrón MVC debe ser lo más minimalista posible, limitandose solo a la lógica de la aplicación que esta en desarrollo.  En nuestro ejemplo, solo consiste en un método (<code>obtenerAxioma(self,vNroEscogido)</code>) que toma el string de la lista <code>vAxiomas</code> indicado por el parámetro <code>vNroEscogido</code>.</p>
+<p>El fundamento del patrón MVC indica que, es el Módelo la capa que interactua con la Base de Datos.  En nuestro ejemplo, esto lo estamos simulando con el uso de la lista <code>vAxiomas</code>.  En la vida real, aquí ud. tendrá que especificar un string de conexión a la Base de datos que incluye los parámetros y credenciales para esto, además de las consultas a la misma (programación 3).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="n">vAxiomas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Entre tres puntos, solo pasa una línea recta&quot;</span><span class="p">,</span> <span class="s2">&quot;Una proposición no puede ser verdadera y falsa al mismo tiempo&quot;</span><span class="p">,</span> <span class="s2">&quot;Si dos números naturales tienen el mismo sucesor, esos dos números son el mismo número.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Todas las rectas tienen una cantidad infinita de puntos.&quot;</span><span class="p">,</span> <span class="s2">&quot;Dos rectas paralelas nunca se tocan&quot;</span><span class="p">,</span> <span class="s2">&quot;Dos líneas rectas nunca encierran algo.&quot;</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">axiomaModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">obtenerAxioma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vNroEscogido</span><span class="p">):</span>
+        <span class="n">vResult</span> <span class="o">=</span> <span class="n">vAxiomas</span><span class="p">[</span><span class="n">vNroEscogido</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">vResult</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.2-La-Vista">2.1.2 La Vista<a class="anchor-link" href="#2.1.2-La-Vista">&#182;</a></h4><p>La vista incluye dos métodos <code>escojeAxioma</code> y <code>mostrar</code>. El primero, solicita al usuario la selección del nro. del axioma que quiere sea mostrado.  <code>mostrar</code> imprime el string que fue seleccionado de la lista <code>vAxiomas</code> en el Modelo y enviado como parámetro por el Controlador.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="k">class</span> <span class="nc">vistaAxiomasPorTerminal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">mostrar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vAxioma</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y el axioma es: &quot;</span><span class="p">,</span> <span class="n">vAxioma</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">escojeAxioma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vResult</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">vResult</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Tipee el nro. de axioma que quiere ver: &quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">vResult</span>
+
+
+<span class="k">class</span> <span class="nc">vistaAxiomasHTML</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">mostrar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vAxioma</span><span class="p">):</span>
+        <span class="n">vArchivoHtml</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;vistaMVC.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+
+        <span class="n">vPlantilla</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &lt;html&gt;</span>
+<span class="s2">        &lt;head&gt;</span>
+<span class="s2">        &lt;title&gt; Telematica - Prog2 &lt;/title&gt;</span>
+<span class="s2">        &lt;/head&gt;</span>
+<span class="s2">        &lt;body&gt; </span>
+<span class="s2">        &lt;h1&gt;Modelo-Vista-Controlador (MVC)&lt;/h1&gt;</span>
+<span class="s2">        &lt;h2&gt;Vista html&lt;/h2&gt;</span>
+<span class="s2">        &lt;table border=&quot;1&quot;&gt;</span>
+<span class="s2">        &lt;tbody&gt;</span>
+<span class="s2">        &lt;tr&gt;</span>
+<span class="s2">        &lt;td&gt;y el Axioma es: &lt;/td&gt;</span>
+<span class="s2">        &lt;/tr&gt;</span>
+<span class="s2">        &lt;tr&gt;</span>
+<span class="s2">        &lt;td&gt;        </span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">vPlantilla</span> <span class="o">+=</span> <span class="n">vAxioma</span>
+        <span class="n">vPlantilla</span> <span class="o">+=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &lt;/td&gt;</span>
+<span class="s2">        &lt;/tr&gt;</span>
+<span class="s2">        &lt;/tbody&gt;</span>
+<span class="s2">        &lt;/table&gt;</span>
+<span class="s2">        &lt;/body&gt;</span>
+<span class="s2">        &lt;/html&gt;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+
+        <span class="n">vArchivoHtml</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">vPlantilla</span><span class="p">)</span>
+        <span class="n">vArchivoHtml</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">escojeAxioma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vResult</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">vResult</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Tipee el nro. de axioma que quiere ver: &quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">vResult</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.1.3-El-Controlador">2.1.3 El Controlador<a class="anchor-link" href="#2.1.3-El-Controlador">&#182;</a></h4><p>En el Controlador se realiza la coordinación entre la vista y el modelo.  En nuestro ejemplo, el constructor de la clase inicializa los parámetros <code>model</code> y <code>view</code>  con los objetos <code>modelo.axiomaModel()</code> y <code>vista.vistaAxiomasPorTerminal()</code> respectivamente.</p>
+<p>El método <code>run</code> ejecuta la sincronización entre la Vista y el Módelo a través del paso y tratamiento de los valores.  Nótese que la conversión a entero del nro. de axioma seleccionado se realiza en el Controlador y no en la Vista.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+<span class="kn">import</span> <span class="nn">modelo</span>
+<span class="kn">import</span> <span class="nn">vista</span>
+
+
+<span class="k">class</span> <span class="nc">axiomaTerminalController</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">axiomaModel</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">vistaAxiomasPorTerminal</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vNroDeAxiomaEscogido</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">escojeAxioma</span><span class="p">())</span>
+        <span class="n">vAxioma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">obtenerAxioma</span><span class="p">(</span><span class="n">vNroDeAxiomaEscogido</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">mostrar</span><span class="p">(</span><span class="n">vAxioma</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-Consideraciones">3 Consideraciones<a class="anchor-link" href="#3-Consideraciones">&#182;</a></h2><p>Es norma general, al implementar un sistema bajo el patron MVC las siguientes consideraciones:</p>
+<p><strong>El Modelo debe ser lo más ingenioso posible, esto es por que:</strong></p>
+<ul>
+<li>La lógica y reglas del negocio se ejecutan aquí.</li>
+<li>Tiene acceso a los datos del Sistema/App.</li>
+<li>No depende de la Interfaz Gráfica de Usuario (UI).</li>
+</ul>
+<p><strong>El Controlador debe hacerlo lo más ligero posible, esto es por que:</strong></p>
+<ul>
+<li>Actualiza el Modelo cuando el usuario interactua con la Vista.</li>
+<li>Actualiza la Vista cuando el Modelo cambia.</li>
+<li>Procesa los datos antes de despacharlos al Modelo/Vista.</li>
+<li>No muestra los Datos.</li>
+<li>No tiene acceso directo a los Datos del Sistema/App.</li>
+</ul>
+<p><strong>La Vista debe hacerla lo más simple posible, esto es por que:</strong></p>
+<ul>
+<li>Solo muestra y Datos.</li>
+<li>Solo interactua con el usuario.</li>
+<li>No almacena Datos.</li>
+<li>No tiene acceso directo a los Datos del Sistema/App.</li>
+<li>No ejecuta ni la lógica ni las reglas del negocio.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4-Actividades-(evaluadas)">4 Actividades (evaluadas)<a class="anchor-link" href="#4-Actividades-(evaluadas)">&#182;</a></h2><ul>
+<li>Haga este ejemplo más amigable al limitar que los valores posibles de entrada sean mayores o iguales a 1 y que no sea necesario introducir '0' para ver el primer axioma de la lista. (2pts)</li>
+<li>En el ejemplo, mejore la Vista al añadir los conceptos de herencia y polimorfismo de la OOP. (3pts)</li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td>
+<div>
+<div>
+<div>
+<div>&nbsp;</div>
+<div>La entrega de esta asignaci&oacute;n es exclusivamente en su repositorio github/gitlab.</div>
+<div>Las consultas se har&aacute;n &uacute;nicamente por correo a: carlosfranz@ucla.edu.ve con el hashtag en el asunto: **#teleprgm2**</div>
+<div>El lapso de entrega cierra el d&iacute;a lunes 13/03 a las 4:30pm.</div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+ 
+
