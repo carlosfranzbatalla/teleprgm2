@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 
-class vistaAxiomasPorTerminal:
-    def mostrar(self, vAxioma):
-        print("y el axioma es: ", vAxioma)
-
+class vistas:
     def escojeAxioma(self):
         vResult = None
         vResult = input("Tipee el nro. de axioma que quiere ver: ")
         return vResult
 
 
-class vistaAxiomasHTML:
+class vistaAxiomasPorTerminal(vistas):
+    def mostrar(self, vAxioma):
+        print("y el axioma es: ", vAxioma)
+
+
+class vistaAxiomasHTML(vistas):
     def mostrar(self, vAxioma):
         vArchivoHtml = open('vistaMVC.html', 'w')
 
@@ -42,8 +44,3 @@ class vistaAxiomasHTML:
 
         vArchivoHtml.write(vPlantilla)
         vArchivoHtml.close()
-
-    def escojeAxioma(self):
-        vResult = None
-        vResult = input("Tipee el nro. de axioma que quiere ver: ")
-        return vResult

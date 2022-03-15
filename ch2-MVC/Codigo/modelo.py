@@ -7,5 +7,12 @@ vAxiomas = ["Entre tres puntos, solo pasa una línea recta", "Una proposición n
 
 class axiomaModel:
     def obtenerAxioma(self, vNroEscogido):
-        vResult = vAxiomas[vNroEscogido]
+        # if vNroEscogido == 0:
+        #     vResult = "Indice no permitido"
+        # else:
+        #     vResult = vAxiomas[vNroEscogido-1]
+        # return vResult
+
+        # Con el operador ternario
+        vResult = "Indice no permitido" if vNroEscogido == 0 else vAxiomas[vNroEscogido-1]
         return vResult
