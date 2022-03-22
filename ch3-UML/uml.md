@@ -71,3 +71,24 @@ En síntesis, el Diagrama de Clases:
 El diagrama de clases incluye un estandard para la herencia y clases abstractas.  Usando el ejemplo del electrodomestico de esta clase, 
 - Haga la clase 'electrodomestico' abstracta y diagramelo de acuerdo al estandard.  (1pt)
 - Cree una clase que herede de 'electrodomestico' (p. ejem. lavadora) y diagramelo de acuerdo al estandard.  (1pt)
+
+
+<table>
+<tbody>
+<tr>
+<td>
+<div>
+<div>
+<div>
+<div>&nbsp;</div>
+<div>La entrega de esta asignaci&oacute;n es exclusivamente en su repositorio github/gitlab.</div>
+<div>Las consultas se har&aacute;n &uacute;nicamente por correo a: carlosfranz@ucla.edu.ve con el hashtag en el asunto: #teleprgm2</div>
+<div>El lapso de entrega cierra el d&iacute;a viernes 25/03 a las 4:30pm.</div>
+<div>&nbsp;</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
