@@ -1,0 +1,69 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;20&lt;/x&gt;&lt;y&gt;360&lt;/y&gt;&lt;w&gt;190&lt;/w&gt;&lt;h&gt;220&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Almacenista
+--
+    *atributes*
+--
+    - extraeDatosDelEmpleado
+    +DeterminarSalario(self)
+
+
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>580</x><y>10</y><w>200</w><h>260</h></coordinates><panel_attributes>Display
+--
+    vEmpleado
+--
+    +EscojeTipoEmpleado
+    +EscojeEmpleado
+    +MuestraDatosDelEmpleado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>360</y><w>190</w><h>220</h></coordinates><panel_attributes>Almacenista
+--
+    *atributes*
+--
+    - chekaStock
+    + preparaPedido
+    + recibeLoteDeProducto
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>260</y><w>290</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>270;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>360</y><w>190</w><h>220</h></coordinates><panel_attributes>Chofer
+--
+    numeroDeLicencia
+--
+    - asignarVehiculo
+    + calculaKilometrosRecorridos
+    + DeterminarSalario
+    + asignarRuta	
+    + aumentarSalario
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>360</y><w>190</w><h>220</h></coordinates><panel_attributes>Contador
+--
+	
+--
+    - registraEgresosPorSalarios
+    + pagaServiciosBasicos
+    + registraIngresosPorServiciosRealizados
+    + registraEnElLibroDiario
+    + llevaCajaChica
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>260</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>260</y><w>170</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>9</y><w>200</w><h>260</h></coordinates><panel_attributes>terminalController
+--
+
+--
+ + run(self)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>223</x><y>9</y><w>200</w><h>260</h></coordinates><panel_attributes>{AbstractClass}
+Empleado
+--
+    __salario 
+    nombre
+    apellido
+    fechaDeNacimiento
+    vFechaDeIngreso
+    vEmailPersonal
+    vEmailCorporativo
+    vCargo
+    vDepartamento 
+--
+    - extraeDatosDelEmpleado
+    +DeterminarSalario(self)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>413</x><y>130</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>140</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element></diagram>
