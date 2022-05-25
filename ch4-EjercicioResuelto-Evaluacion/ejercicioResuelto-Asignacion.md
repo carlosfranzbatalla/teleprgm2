@@ -1,16 +1,17 @@
 ## Ejercicio Resuelto 
 
-Los arquitectos de software de una empresa deben migrar todas las aplicaciones de recursos humanos a arquitectura MVC, manteniendo la lógica original del negocio. 
+Debido a numerosos problemas de mantenibilidad y escalabilidad, los arquitectos de software de una empresa deben migrar todas las aplicaciones de recursos humanos a una arquitectura bajo el patrón MVC, manteniendo intacta la lógica original del negocio. Para esto, las clases que corresponden al manejo de los empleados de la empresa deben ahora prescindir completamente de la interacción con los usuarios, labor que sera encargada a las clases vista.  
 
 La especificación del requerimiento se da desde el diagrama de clases:
-![alt text](./images/diagramaDeClases.png)
+![Diagrama de Clases - MVC Empleados](./images/diagramaDeClases.png)
 
 
 ## Resolución
 
 ### Modelo:
 
-Para  el código que corresponde al Modelo del patrón MVC, vamos a definir la clase xxx.  Como corresponde a la naturaleza del patron, aquí van todas las operaciones que se van a ejecutar sobre los datos propios de la aplicación de acuerdo a las reglas de negocio.
+
+Para  el código que corresponde al Modelo del patrón MVC, vamos a definir la clase `Empleado`.  Como corresponde a la naturaleza del patrón, aquí van todas las operaciones que se van a ejecutar sobre los datos propios de la aplicación de acuerdo a las reglas de negocio.
 
 En un esquema MVC, es el modelo quien se entiende directamente con la Base de Datos de una aplicación.  En el nivel en el que se encuentra esta cátedra, no está planteado cubrir contenidos de la materia Base de Datos, por lo que emularemos su funcionamiento con dos estructuras de datos del tipo Diccionario que son `vAlmacenDeDatos` y `vDiccionarioTiposDeEmpleados`.
 
@@ -185,7 +186,7 @@ El empleado Truman Capote de Cédula de Identidad: 20111222 recibe un salario de
 - Validez de la salida
 
 Investigación:
-- Mencione al menos 4 ventajas de adoptar el patron MVC en su desarrollo.
+- Mencione al menos 4 ventajas de adoptar el patrón MVC en su desarrollo.
 - Mencione al menos 4 beneficios de implementar el uso del diagrama de clases en un proceso de desarrollo. 
 
 

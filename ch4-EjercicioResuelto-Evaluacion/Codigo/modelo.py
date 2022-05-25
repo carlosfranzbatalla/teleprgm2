@@ -2,6 +2,10 @@
 import datetime
 from abc import (ABC, abstractmethod)
 
+vDiccionarioTiposDeEmpleados = {
+    1: 'almacenista', 2: 'chofer', 3: 'contador'
+}
+
 vAlmacenDeDatos = {
     'empleado': {
         'almacenista': [
@@ -15,10 +19,6 @@ vAlmacenDeDatos = {
             {
                 "ci": "20777888", "nombre": "Emile", "apellido": "Cioran", "salario": 4, "fechaDeNacimiento": datetime.datetime(2012, 12, 20, 0, 0), "fechaDeIngreso": datetime.datetime(2012, 12, 20, 0, 0)}]
     }
-}
-
-vDiccionarioTiposDeEmpleados = {
-    1: 'almacenista', 2: 'chofer', 3: 'contador'
 }
 
 
@@ -43,8 +43,7 @@ class Empleado(ABC):  # Super Clase o Clase Base
             self.apellido = vDatosDelEmpleado[2]
             self.__salario = vDatosDelEmpleado[3]
             self.fechaDeNacimiento = vDatosDelEmpleado[4]
-        else:
-            # TODO mejoralo, intenta una solucion mas elegante
+        else:            
             self.nombre = self.apellido = self.__salario = self.fechaDeNacimiento = "Empleado no encontrado"
 
     def extraeDatosDelEmpleado(self, cedulaDeIdentidad, vTipoDeEmpleado):
@@ -58,11 +57,9 @@ class Empleado(ABC):  # Super Clase o Clase Base
                 pass
         return vResult
 
-    def DeterminarSalario(self):  # Encapsulamiento - esto es un getter
-        vResult = "El empleado " + self.nombre+' '+self.apellido + " de Cédula de Identidad: " + self.cedulaDeIdentidad + " recibe un salario de: " + str(self.__salario)
-        return vResult
+    
 
-    def asignarElSalario(self, vSalario):  # Encapsulamiento - esto es un setter
+    def asignarElSalario(self, vSalario):  
         vResult = None
         vResult = "no puede pagar 0 a un empleado" if vSalario <= 0 else "Salario asignado correctamente"
         return vResult
@@ -117,7 +114,7 @@ class Chofer(Empleado):
     def asignarRuta(self, vDireccion):
         pass
 
-    def aumentarSalario(self, vAumento):  # polimorfismo -- overriding.
+    def aumentarSalario(self, vAumento):  
         __bonoChoferes = 10
         vAumento += __bonoChoferes
         self.__salario += vAumento
